@@ -101,13 +101,21 @@ body {
   color: #a435f0;
   text-decoration: none;
 }
-
+.search-icon{
+  position: relative;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin: 5px;
+}
 .shopping-cart{
   position: relative;
   display: block;
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  margin: 5px;
 }
 .search-bar input {
   border-top-style: hidden;
@@ -181,5 +189,8 @@ div .dark :hover {
     position: static;
     display: flex;
     visibility: inherit;
+  }
+  .search-icon {
+    display: block;
   }
 }
