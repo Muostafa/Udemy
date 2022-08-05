@@ -5,9 +5,11 @@ body {
   font-weight: 400;
   color: #1c1d1f;
   line-height: 1.4;
+  z-index: 0;
 }
 
 .web-main-content-wrapper{
+    position: relative;
     margin: auto;
     background-color: #fff;
     display: flex;
@@ -15,12 +17,14 @@ body {
     justify-content: center;
     box-shadow: 0 2px 4px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08);
     padding: 0px;
+    z-index: 1;
 
 }
 
 .mobile{
   position: absolute;
   display: none;
+  visibility: hidden;
 }
 .nav-links {
   width: 100%;
@@ -28,6 +32,7 @@ body {
   text-align: center;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 }
 
 .nav-links div {
@@ -131,9 +136,10 @@ div .dark :hover {
   justify-content: center;
   align-items: center;
   width: 100%;
+  z-index: 0;
 }
 .billboard-banner-image-container {
-  background-color: #f7f7f7;
+  background-color: #f8f8f8;
   height: 20vw;
   min-width: 70vw;
   max-width: 1345px;
@@ -145,7 +151,7 @@ div .dark :hover {
 }
 @media only screen and (max-width: 1300px){
   .billboard-banner-image-container {
-    background-color: #f7f7f7;
+    background-color: #f8f8f8;
     height: 22vw;
     min-height: 180px;
     min-width: 100%;
@@ -155,12 +161,14 @@ div .dark :hover {
   .udemy-business {
     position: absolute;
     display: none;
+    visibility: hidden;
   }
 }
 @media only screen and (max-width: 1100px) {
    .teach-on-udemy {
     position: absolute;
     display: none;
+    visibility: hidden;
   }
 }
 @media only screen and (max-width: 850px) {
@@ -172,5 +180,6 @@ div .dark :hover {
   .mobile{
     position: static;
     display: flex;
+    visibility: inherit;
   }
 }
