@@ -14,6 +14,7 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 4px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08);
+    padding: 0px;
 
 }
 
@@ -81,10 +82,10 @@ body {
   text-decoration: none;
 }
 .login:hover{
-  background-color: #C0C0C0;
+  background-color: #E0E0E0;
 }
 .lang:hover{
-  background-color: #C0C0C0;
+  background-color: #E0E0E0;
 }
 .language{
   position: relative;
@@ -111,6 +112,7 @@ body {
   background-color: #f7f9fa;
 }
 
+
 .no-outline:focus {
   outline: none;
 }
@@ -131,21 +133,26 @@ div .dark :hover {
   width: 100%;
 }
 .billboard-banner-image-container {
-  background-color: #73726c;
-  height: 22vw;
+  background-color: #f7f7f7;
+  height: 20vw;
   min-width: 70vw;
-  max-width: 1350px;
+  max-width: 1345px;
+  overflow: hidden;
+}
+.billboard-banner-image-container img {
+  object-fit: contain;
+  object-position: initial;
 }
 @media only screen and (max-width: 1300px){
   .billboard-banner-image-container {
-    background-color: #73726c;
+    background-color: #f7f7f7;
     height: 22vw;
     min-height: 180px;
     min-width: 100%;
   }
 }
 @media only screen and (max-width: 1300px) {
-  .udemy-buisness {
+  .udemy-business {
     position: absolute;
     display: none;
   }
