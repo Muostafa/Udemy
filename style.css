@@ -6,15 +6,19 @@ body {
   margin: 0;
   font-weight: 400;
   color: #1c1d1f;
-  line-height: 1.4;
   z-index: 0;
   justify-content: center;
   align-items: center;
 }
-
+div article{
+  line-height: 1.1;
+}
 h1{
   font-family: suisse;
-  
+}
+h3{
+  font-weight: lighter;
+  font-size: small;
 }
 .web-main-content-wrapper{
     position: relative;
@@ -41,12 +45,13 @@ h1{
   justify-content: space-between;
   align-items: center;
   z-index: 1;
+  
 }
 
 .nav-links div {
     list-style: none;
     display: inline-flex;
-    padding: 0 1.2rem;
+    padding: 0 0rem;
     width: auto;
     height: 100%;
     color: black;
@@ -72,6 +77,7 @@ h1{
   background-color: #f7f9fa;
   border-radius:9999px;
   margin:0 1.2rem;
+  
 }
 .sign-up{
   position: relative;
@@ -79,7 +85,7 @@ h1{
   display: block;
   align-items: center;
   justify-content: center;
-  min-width: 6rem;
+  min-width: 5rem;
   color: #fff;
   background-color: #1c1d1f;
   text-decoration: none;
@@ -108,7 +114,7 @@ h1{
   display: block;
   align-items: center;
   justify-content: center;
-  color: #a435f0;
+  color: #5624d0;
   text-decoration: none;
 }
 .search-icon{
@@ -145,7 +151,7 @@ h1{
 }
 
 div .dark :hover {
-  color: #a435f0;
+  color: #5624d0;
 }
 
 
@@ -190,13 +196,11 @@ main {
   height: 90px;
   transform: translate(-17vw, 55px);
 }
-.content-box-mobile {
-  position: absolute;
-  display: none;
-  visibility: hidden;
-  padding: 2rem;
-}
 
+
+.main-items{
+  padding: 1rem;
+}
 @media only screen and (max-width: 1300px){
   .billboard-banner-image-container {
     background-color: #f8f8f8;
@@ -230,14 +234,23 @@ main {
 }
 @media only screen and (max-width: 850px) {
   .billboard-content-box {
-    visibility: hidden;
+    position: relative;
+    display: block;
+  flex-direction: column;
+  box-shadow: none;
+  box-shadow: 0 0px 0px rgb(0 0 0 / 8%), 0 0px 0px rgb(0 0 0 / 8%);
+  margin: 0;
+  line-height: 1.2;
+  min-width: 100%;
+  max-width: none;
+  height: auto;
+  padding: 1rem;
+  transform: translate(0, 0);
   }
-  
-  .content-box-mobile {
-    position: static;
-    display: flex;
-    visibility: visible;
+  .billboard {
+    flex-direction: column;
   }
+ 
   .webpage{
     position: absolute;
     display: none;
