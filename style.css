@@ -255,7 +255,7 @@ main {
   color: #6a6f73;
   padding: 0.4rem 0.6rem;
   font-size: medium;
-  font-weight: 800;
+  font-weight: 700;
   
 }
 .catagories-button:hover {
@@ -263,7 +263,7 @@ main {
   color: black;
 }
 .courses {
-  width: 100vw;
+  width: 100%;
   display: flex;
   padding-left: 1.2rem;
   flex-flow: column wrap;
