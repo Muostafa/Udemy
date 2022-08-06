@@ -1,4 +1,6 @@
 body {
+  display: flex;
+  flex-direction: column;
   font-family: 'Open Sans', sans-serif;
   padding: 0;
   margin: 0;
@@ -6,8 +8,14 @@ body {
   color: #1c1d1f;
   line-height: 1.4;
   z-index: 0;
+  justify-content: center;
+  align-items: center;
 }
 
+h1{
+  font-family: suisse;
+  
+}
 .web-main-content-wrapper{
     position: relative;
     margin: auto;
@@ -86,6 +94,8 @@ body {
   color: black;
   text-decoration: none;
 }
+
+
 .login:hover{
   background-color: #E0E0E0;
 }
@@ -138,13 +148,21 @@ div .dark :hover {
   color: #a435f0;
 }
 
+
+main {
+  align-self: center;
+  min-width: 70vw;
+  max-width: 1345px;
+  background-color: white;
+}
 /* Billboard section */
 .billboard {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   width: 100%;
   z-index: 0;
+  margin-bottom: 0.5rem;
 }
 .billboard-banner-image-container {
   background-color: #f8f8f8;
@@ -157,19 +175,50 @@ div .dark :hover {
   object-fit: contain;
   object-position: initial;
 }
+
+.billboard-content-box {
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
+  background: #fff;
+  position: absolute;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+  padding: 2.4rem;
+  margin: 0;
+  line-height: 1;
+  width: 350px;
+  height: 90px;
+  transform: translate(-17vw, 55px);
+}
+.content-box-mobile {
+  position: absolute;
+  display: none;
+  visibility: hidden;
+  padding: 2rem;
+}
+
 @media only screen and (max-width: 1300px){
   .billboard-banner-image-container {
     background-color: #f8f8f8;
-    height: 22vw;
     min-height: 180px;
     min-width: 100%;
   }
+  main {
+    min-width: 100%;
+  }
+  
+
 }
 @media only screen and (max-width: 1300px) {
   .udemy-business {
     position: absolute;
     display: none;
     visibility: hidden;
+  }
+  .billboard-content-box {
+    width: 300px;
+    height: 80px;
+    transform: translate(-25vw, 15px);
   }
 }
 @media only screen and (max-width: 1100px) {
@@ -180,6 +229,15 @@ div .dark :hover {
   }
 }
 @media only screen and (max-width: 850px) {
+  .billboard-content-box {
+    visibility: hidden;
+  }
+  
+  .content-box-mobile {
+    position: static;
+    display: flex;
+    visibility: visible;
+  }
   .webpage{
     position: absolute;
     display: none;
