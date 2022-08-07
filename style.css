@@ -270,7 +270,7 @@ main {
   align-items: center;
   justify-content: space-between;
   margin: 0px;
-  height: 270px;
+  height: 570px;
   overflow: hidden;
   box-sizing: border-box;
   overflow-y: hidden;
@@ -279,7 +279,7 @@ main {
   box-sizing: border-box;
   margin: 10px 5px;
   padding: 0;
-  flex: -1 0 20%;
+  flex: 0 0 15%;
   flex-direction: column;
   display: inline-block;
   position: relative;
