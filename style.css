@@ -291,6 +291,11 @@ main {
   border: 1px solid #d1d7dc;
   margin-bottom: 0;
   padding: 0;
+  width:"240";
+  height:"135"
+}
+.course-content:hover {
+  cursor: pointer;
 }
 .instructors {
   color: #6a6f73;
@@ -392,6 +397,13 @@ main {
     flex-direction: column;
   }
 
+  .course-content{
+    flex: 1 0 30%;
+  }
+  .border{
+    width: 100%;
+    height: auto;
+  }
   .webpage {
     position: absolute;
     display: none;
