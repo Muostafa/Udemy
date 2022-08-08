@@ -94,6 +94,9 @@ h3 {
   cursor: pointer;
   color: #5624d0;
 }
+input[type=search]:focus {
+  outline: none;
+}
 .sign-up {
   position: relative;
   border: 1px black solid;
