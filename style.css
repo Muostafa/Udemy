@@ -94,7 +94,7 @@ h3 {
   cursor: pointer;
   color: #5624d0;
 }
-input[type=search]:focus {
+input[type="search"]:focus {
   outline: none;
 }
 .sign-up {
@@ -271,9 +271,8 @@ main {
   flex-wrap: wrap;
   align-self: center;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0px;
-  height: 570px;
   overflow: hidden;
   box-sizing: border-box;
   overflow-y: hidden;
@@ -294,8 +293,8 @@ main {
   border: 1px solid #d1d7dc;
   margin-bottom: 0;
   padding: 0;
-  width:"240";
-  height:"135"
+  width: "240";
+  height: "135";
 }
 .course-content:hover {
   cursor: pointer;
@@ -304,7 +303,9 @@ main {
   color: #6a6f73;
   margin: 2px 0;
   padding: 0;
-  font-family: udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+  font-family: udemy sans, sf pro text, -apple-system, BlinkMacSystemFont,
+    Roboto, segoe ui, Helvetica, Arial, sans-serif, apple color emoji,
+    segoe ui emoji, segoe ui symbol;
   font-weight: 400;
   line-height: 1.4;
   font-size: 11px;
@@ -313,27 +314,39 @@ main {
   display: flex;
 }
 .rating-number {
-  color: #b4690e;font-size: 15px; font-weight: bolder; margin: 3px 0; padding: 0;
+  color: #b4690e;
+  font-size: 15px;
+  font-weight: bolder;
+  margin: 3px 0;
+  padding: 0;
 }
 .reviews-number {
-  color: #6a6f73;font-size: 11px; font-weight: 400; margin: 3px 0; padding: 0; align-self: center;
+  color: #6a6f73;
+  font-size: 11px;
+  font-weight: 400;
+  margin: 3px 0;
+  padding: 0;
+  align-self: center;
 }
 .course-title h3 {
-  font-size: 14px; font-weight: bolder; margin: 2px 0; padding: 0;
+  font-size: 14px;
+  font-weight: bolder;
+  margin: 2px 0;
+  padding: 0;
 }
 .bestseller {
-  font-family: udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
-                  margin: 0;
-                  background-color: #eceb98;
-                  color: #3d3c0a;
-                  display: inline-block;
-                  margin-top: 6px;
-                  padding: 0.3rem 0.6rem;
-                  white-space: nowrap;
-                  font-weight: 700;
-                  line-height: 1;
-                  letter-spacing: -0.02rem;
-                  font-size: 11px;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-color: #eceb98;
+  color: #3d3c0a;
+  display: inline-block;
+  margin-top: 6px;
+  padding: 0.3rem 0.6rem;
+  white-space: nowrap;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02rem;
+  font-size: 11px;
 }
 @media only screen and (max-width: 1800px) {
   .billboard-content-box {
@@ -400,10 +413,11 @@ main {
     flex-direction: column;
   }
 
-  .course-content{
-    flex: 1 0 30%;
+  .course-content {
+    flex: 0 0 30%;
+    max-width: 240px;
   }
-  .border{
+  .border {
     width: 100%;
     height: auto;
   }
@@ -422,8 +436,5 @@ main {
   }
   .nav-links {
     transform: translate(-0px, 0px);
-  }
-  .courses-pictures{
-    height: 580px;
   }
 }
