@@ -42,7 +42,12 @@ h3 {
   padding: 0px;
   z-index: 1;
 }
-
+.hide {
+    position: relative;
+    display: none !important;
+    visibility: collapse;
+    background-color: #b4690e;
+}
 .mobile {
   position: absolute;
   display: none;
