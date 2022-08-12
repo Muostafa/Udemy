@@ -31,8 +31,6 @@ fetch("http://localhost:3000/courses")
       renderCourses(course);
     });
   })
-  .then(() => {
-  })
   .catch((err) => {
     console.log(err);
   });
@@ -43,6 +41,7 @@ fetch("http://localhost:3000/courses")
 let courses = [];
 // coursesTitle[i] has the title & category(Python, Excel, ...) of courses[i] (help in search)
 let coursesTitle = [];
+//coursesPics is the div in html that we will add all courses to it
 const coursesPics = document.querySelector(".courses-pictures");
 
 //create course from json object and add it to the html
@@ -89,6 +88,13 @@ function renderCourses(course) {
   price.style.padding = "0";
   price.textContent = "E£" + course.price;
   courseElement.appendChild(price);
+
+  //add bestseller
+  if(course.bestseller){
+    let bestseller = document.createElement("aside");
+    bestseller.innerHTML = '<aside class="bestseller">Bestseller</aside>';
+    courseElement.appendChild(bestseller);
+  }
 
   coursesPics.appendChild(courseElement);
   courses.push(courseElement);
