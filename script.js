@@ -20,14 +20,15 @@ searchForm.querySelector(".search-button").addEventListener("click", () => {
 
 
 //fetch courses json file
-fetch("./courses.json")
+//type "npm install -g json-server" then "json-server --watch courses.json" in terminal to start server
+fetch("http://localhost:3000/courses")
   .then((response) => {
     return response.json();
   })
   .then((data) => {
-    data.forEach((element) => {
+    data.forEach((course) => {
       //create and add courses elements to courses array
-      createCourseElement(element);
+      renderCourses(course);
     });
   })
   .then(() => {
@@ -36,6 +37,7 @@ fetch("./courses.json")
     console.log(err);
   });
 
+
 // courses picture div
 
 let courses = [];
@@ -43,7 +45,8 @@ let courses = [];
 let coursesTitle = [];
 const coursesPics = document.querySelector(".courses-pictures");
 
-function createCourseElement(course) {
+//create course from json object and add it to the html
+function renderCourses(course) {
   let courseElement = document.createElement("div");
   courseElement.classList.add("course-content");
 
