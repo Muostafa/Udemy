@@ -1,9 +1,23 @@
 // extract text from search bar
 const searchForm = document.querySelector(".form");
 const searchText = searchForm.querySelector("input");
-function getText() {
-  return searchText.value;
-}
+
+// search functionality
+searchForm.querySelector(".search-button").addEventListener("click", () => {
+  //text that we will search with
+  let tempText = searchText.value.toLowerCase();
+  //loop through all titles and add .hide css class to hide unwanted courses
+  for (let i = 0; i < courses.length; i++) {
+    const course = courses[i];
+    if(!coursesTitle[i][0].includes(tempText)){
+      courses[i].classList.add("hide")
+    }
+    else{
+      courses[i].classList.remove("hide")
+    }
+  }
+});
+
 
 //fetch courses json file
 fetch("./courses.json")
@@ -12,6 +26,7 @@ fetch("./courses.json")
   })
   .then((data) => {
     data.forEach((element) => {
+      //create and add courses elements to courses array
       createCourseElement(element);
     });
   })
@@ -22,8 +37,12 @@ fetch("./courses.json")
   });
 
 // courses picture div
+
 let courses = [];
+// coursesTitle[i] has the title & category(Python, Excel, ...) of courses[i] (help in search)
+let coursesTitle = [];
 const coursesPics = document.querySelector(".courses-pictures");
+
 function createCourseElement(course) {
   let courseElement = document.createElement("div");
   courseElement.classList.add("course-content");
@@ -70,4 +89,5 @@ function createCourseElement(course) {
 
   coursesPics.appendChild(courseElement);
   courses.push(courseElement);
+  coursesTitle.push([course.title.toLowerCase(), course.category]);
 }
