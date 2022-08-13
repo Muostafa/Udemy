@@ -1,3 +1,22 @@
+// get category (python, excel,...)
+let categorySelected = "python";
+let pills = document.getElementById("pills-tab");
+pills.addEventListener("click", () => {
+  let pillsArr = document.querySelectorAll(".nav-link");
+  pillsArr.forEach((element) => {
+    if (element.ariaSelected === "true")
+      categorySelected = element.innerText.toLowerCase();
+  });
+  searchText.value = "";
+  for (let i = 0; i < courses.length; i++) {
+    if (coursesTitle[i][1] === categorySelected)
+      courses[i].classList.remove("hide");
+    else {
+      courses[i].classList.add("hide");
+    }
+  }
+});
+
 // extract text from search bar
 const searchForm = document.querySelector(".form");
 const searchText = searchForm.querySelector("input");
@@ -8,16 +27,16 @@ searchForm.querySelector(".search-button").addEventListener("click", () => {
   let tempText = searchText.value.toLowerCase();
   //loop through all titles and add .hide css class to hide unwanted courses
   for (let i = 0; i < courses.length; i++) {
-    const course = courses[i];
-    if(!coursesTitle[i][0].includes(tempText)){
-      courses[i].classList.add("hide")
-    }
-    else{
-      courses[i].classList.remove("hide")
+    if (
+      coursesTitle[i][0].includes(tempText) &&
+      coursesTitle[i][1] === categorySelected
+    )
+      courses[i].classList.remove("hide");
+    else {
+      courses[i].classList.add("hide");
     }
   }
 });
-
 
 //fetch courses json file
 //type "npm install -g json-server" then "json-server --watch courses.json" in terminal to start server
@@ -35,7 +54,6 @@ fetch("http://localhost:3000/courses")
     console.log(err);
   });
 
-
 // courses picture div
 
 let courses = [];
@@ -48,6 +66,7 @@ const coursesPics = document.querySelector(".courses-pictures");
 function renderCourses(course) {
   let courseElement = document.createElement("div");
   courseElement.classList.add("course-content");
+  if (course.category !== "python") courseElement.classList.add("hide");
 
   //add img
   let img = document.createElement("img");
@@ -90,7 +109,7 @@ function renderCourses(course) {
   courseElement.appendChild(price);
 
   //add bestseller
-  if(course.bestseller){
+  if (course.bestseller) {
     let bestseller = document.createElement("aside");
     bestseller.innerHTML = '<aside class="bestseller">Bestseller</aside>';
     courseElement.appendChild(bestseller);
@@ -98,5 +117,8 @@ function renderCourses(course) {
 
   coursesPics.appendChild(courseElement);
   courses.push(courseElement);
-  coursesTitle.push([course.title.toLowerCase(), course.category]);
+  coursesTitle.push([
+    course.title.toLowerCase(),
+    course.category.toLowerCase(),
+  ]);
 }

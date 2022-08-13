@@ -9,7 +9,7 @@
       "price": "679.99",
       "rating": 4.4,
       "people": "2,948",
-      "category": "Python",
+      "category": "python",
       "bestseller": false
     },
     {
@@ -21,7 +21,7 @@
       "price": "1,599.99",
       "rating": 4.4,
       "people": "18,019",
-      "category": "Python",
+      "category": "python",
       "bestseller": true
     },
     {
@@ -33,7 +33,7 @@
       "price": "679.99",
       "rating": 4.4,
       "people": "1,781",
-      "category": "Python",
+      "category": "python",
       "bestseller": false
     },
     {
@@ -45,7 +45,7 @@
       "price": "319.99",
       "rating": 4.3,
       "people": "2,773",
-      "category": "Python",
+      "category": "python",
       "bestseller": false
     },
     {
@@ -57,7 +57,7 @@
       "price": "519.99",
       "rating": 4.4,
       "people": "2,930",
-      "category": "Python",
+      "category": "python",
       "bestseller": false
     },
     {
@@ -69,7 +69,7 @@
       "price": "1,299.99",
       "rating": 4.7,
       "people": "1,813",
-      "category": "Python",
+      "category": "python",
       "bestseller": true
     },
     {
@@ -81,7 +81,7 @@
       "price": "319.99",
       "rating": 4.5,
       "people": "8,809",
-      "category": "Python",
+      "category": "python",
       "bestseller": true
     },
     {
@@ -93,7 +93,7 @@
       "price": "1,299.99",
       "rating": 4.5,
       "people": "10.701",
-      "category": "Python",
+      "category": "python",
       "bestseller": false
     },
     {
@@ -105,7 +105,7 @@
       "price": "269.99",
       "rating": 4.7,
       "people": "10,703",
-      "category": "Python",
+      "category": "python",
       "bestseller": false
     },
     {
@@ -117,7 +117,7 @@
       "price": "299.99",
       "rating": 4.5,
       "people": "10,693",
-      "category": "Python",
+      "category": "python",
       "bestseller": false
     }
   ]
