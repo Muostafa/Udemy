@@ -52,7 +52,7 @@ function renderCourses(course) {
   //add img
   let img = document.createElement("img");
   img.classList.add("border");
-  img.alt = "";
+  img.alt = "Python course";
   img.width = "240";
   img.height = "135";
   img.src = course.image;

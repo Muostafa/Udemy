@@ -353,6 +353,15 @@ main {
   letter-spacing: -0.02rem;
   font-size: 11px;
 }
+footer {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  background-color: #1c1d1f;
+  align-items: center;
+  width: 100%;
+  margin: auto 0 0 0;
+}
 @media only screen and (max-width: 1800px) {
   .billboard-content-box {
     transform: translate(-17vw, 55px);
