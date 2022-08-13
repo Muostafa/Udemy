@@ -1,0 +1,166 @@
+/* Catagories */
+.catagories-button {
+  align-items: center;
+  display: inline-flex;
+  background: none;
+  border: none;
+  color: #6a6f73;
+  padding: 0.4rem 0.6rem;
+  font-size: medium;
+  font-weight: 700;
+}
+.catagories-button:hover {
+  cursor: pointer;
+  color: black;
+}
+.courses-catagories {
+  width: 100%;
+  display: flex;
+  padding-left: 1.2rem;
+  flex-flow: column wrap;
+  overflow: hidden;
+}
+.courses-box {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+}
+.courses-pictures {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0px;
+  overflow: hidden;
+  box-sizing: border-box;
+  overflow-y: hidden;
+}
+.course-content {
+  box-sizing: border-box;
+  margin: 10px 5px;
+  padding: 0;
+  flex: 0 0 15%;
+  flex-direction: column;
+  display: inline-block;
+  position: relative;
+  width: 240px;
+  height: 265px;
+  background-color: white;
+}
+.course-content > h3{
+  font-size: 15px;
+  font-weight: 600;
+  margin: 3px 0;
+  padding: 0;
+}
+.course-content:hover {
+  cursor: pointer;
+}
+.nav-pills {
+  --bs-nav-pills-link-active-color: #1c1d1f;
+  --bs-nav-pills-link-active-bg: fff;
+}
+/* Courses section */
+.courses-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  position: relative;
+  max-width: 1346px;
+  border: 1px solid #d1d7dc;
+  padding: 1rem 1.8rem;
+  margin: 0 0 20px 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.courses-container > article > h3{
+  font-size: x-large; font-weight: 600; padding: 0.5rem 0
+}
+.explore-button {
+  padding: 0 0.75rem; font-size: medium; font-weight: bold
+}
+
+.threadbit .thread {
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+}
+.instructors {
+  color: #6a6f73;
+  margin: 2px 0;
+  padding: 0;
+  font-family: udemy sans, sf pro text, -apple-system, BlinkMacSystemFont,
+    Roboto, segoe ui, Helvetica, Arial, sans-serif, apple color emoji,
+    segoe ui emoji, segoe ui symbol;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 11px;
+}
+.course-rating {
+  display: flex;
+}
+.rating-number {
+  color: #b4690e;
+  font-size: 15px;
+  font-weight: bolder;
+  margin: 3px 0;
+  padding: 0;
+}
+.reviews-number {
+  color: #6a6f73;
+  font-size: 11px;
+  font-weight: 400;
+  margin: 3px 0;
+  padding: 0;
+  align-self: center;
+}
+.stars {
+  align-self: center;
+  padding: 0 4px;
+}
+.course-title h3 {
+  font-size: 14px;
+  font-weight: bolder;
+  margin: 2px 0;
+  padding: 0;
+}
+.bestseller {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-color: #eceb98;
+  color: #3d3c0a;
+  display: inline-block;
+  margin-top: 6px;
+  padding: 0.3rem 0.6rem;
+  white-space: nowrap;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02rem;
+  font-size: 11px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .courses-container {
+    min-width: 138%;
+    display: flex;
+    border: 1px solid #d1d7dc;
+    padding: 1.7rem;
+    overflow: hidden;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    transform: translate(17px, 0);
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .course-content {
+    flex: 0 0 30%;
+    max-width: 240px;
+  }
+  .courses-container {
+    min-width: 132%;
+  }
+}

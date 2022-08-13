@@ -119,6 +119,54 @@
       "people": "10,693",
       "category": "python",
       "bestseller": false
+    },
+    {
+      "id": 11,
+      "link": "https://www.udemy.com/course/complete-python-bootcamp/",
+      "title": "Become a Certified HTML, CSS, JavaScript Web Developer",
+      "author": "Mark Lassoff",
+      "image": "https://img-b.udemycdn.com/course/240x135/11475_9dac_14.jpg",
+      "price": "679.99",
+      "rating": 4.5,
+      "people": "2,734",
+      "category": "web development",
+      "bestseller": false
+    },
+    {
+      "id": 12,
+      "link": "https://www.udemy.com/course/complete-python-bootcamp/",
+      "title": "The Complete 2020 Fullstack Web Developer Course",
+      "author": "Kalob Taulien",
+      "image": "https://img-b.udemycdn.com/course/240x135/19332_6b49_15.jpg",
+      "price": "1,299.99",
+      "rating": 4.5,
+      "people": "6,153",
+      "category": "web development",
+      "bestseller": false
+    },
+    {
+      "id": 13,
+      "link": "https://www.udemy.com/course/complete-python-bootcamp/",
+      "title": "Introduction to Web Development",
+      "author": "Mark Lassoff",
+      "image": "https://img-b.udemycdn.com/course/240x135/99986_6cb4_10.jpg",
+      "price": "229.99",
+      "rating": 4.3,
+      "people": "1,734",
+      "category": "web development",
+      "bestseller": true
+    },
+    {
+      "id": 14,
+      "link": "",
+      "title": "Become a Certified HTML, CSS, JavaScript Web Developer",
+      "author": "Evan Kimbrell",
+      "image": "https://img-b.udemycdn.com/course/240x135/369662_7246_2.jpg",
+      "price": "679.99",
+      "rating": 4.6,
+      "people": "1,534",
+      "category": "web development",
+      "bestseller": true
     }
   ]
 }

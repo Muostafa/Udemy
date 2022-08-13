@@ -19,17 +19,18 @@
     />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/billboard.css" />
+    <link rel="stylesheet" href="/css/courses.css" />
   </head>
-  <body style="background-color: fff">
-    <nav style="width: 100%">
+  <body>
+    <nav>
       <section class="nav-links">
-        <div class="mobile" style="margin: 0 10px; padding: 0">
+        <div class="mobile">
           <a href="" class="shopping-cart"
             ><span class="material-symbols-outlined"> menu </span></a
           >
         </div>
         <div class="web-logo">
-          <figure style="margin: 0; padding: 0.8rem">
+          <figure>
             <a href="">
               <img
                 src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
@@ -65,10 +66,10 @@
             /><input class="search-button" type="submit" value="Search" />
           </form>
         </div>
-        <div class="udemy-business" style="margin: 0 0.2rem">
+        <div class="udemy-business">
           <a href="" class="dark"><h3>Udemy Business</h3></a>
         </div>
-        <div class="teach-on-udemy" style="margin-left: 1rem">
+        <div class="teach-on-udemy">
           <a href="" class="dark"><h3>Teach on Udemy</h3></a>
         </div>
         <div style="margin: 20px; padding: 0">
@@ -79,15 +80,17 @@
             ><span class="material-symbols-outlined"> shopping_cart </span></a
           >
         </div>
-        <div class="webpage" style="margin: 0 4px; padding: 0">
-          <a href="" class="login"><h3 style="font-weight: 600">Log in</h3></a>
+        <div class="webpage button-margin">
+          <a href="" class="white-button"
+            ><h3 style="font-weight: 600">Log in</h3></a
+          >
         </div>
-        <div class="webpage" style="margin: 0 4px; padding: 0">
+        <div class="webpage button-margin">
           <a href="" class="sign-up"
             ><h3 style="font-weight: 600">Sign up</h3></a
           >
         </div>
-        <div class="webpage lang" style="margin: 0 4px; padding: 6px 7px">
+        <div class="webpage lang" style="padding: 6px 7px">
           <a href="" class="language"
             ><span
               class="material-symbols-outlined"
@@ -99,7 +102,7 @@
         </div>
       </section>
     </nav>
-    <main style="margin-bottom: 20px">
+    <main>
       <!-- billboard picture -->
       <header class="billboard">
         <div class="billboard">
@@ -114,24 +117,8 @@
           <div class="billboard-content-box">
             <div>
               <article>
-                <h2
-                  style="
-                    font-size: 2.2rem;
-                    margin: 0;
-                    padding: 0 0 4px 0;
-                    font-weight: 600;
-                  "
-                >
-                  New to Udemy? Lucky you.
-                </h2>
-                <p
-                  style="
-                    margin: 0;
-                    padding: 0;
-                    line-height: 1.5;
-                    font-weight: lighter;
-                  "
-                >
+                <h2>New to Udemy? Lucky you.</h2>
+                <p>
                   Courses start at E£169.99. Get your new-student offer before
                   it expires.
                 </p>
@@ -142,17 +129,8 @@
       </header>
       <section class="headline">
         <article>
-          <h2
-            style="
-              font-size: 2rem;
-              margin: 0.5rem 0;
-              padding: 0;
-              font-weight: 600;
-            "
-          >
-            A broad selection of courses
-          </h2>
-          <p style="margin: 0.5rem 0; padding: 0">
+          <h2>A broad selection of courses</h2>
+          <p>
             Choose from 10 online video courses with new additions published
             every month
           </p>
@@ -214,7 +192,7 @@
                 type="button"
                 role="tab"
               >
-              Data Science
+                Data Science
               </button>
             </li>
             <li class="nav-item" role="presentation">
@@ -225,7 +203,7 @@
                 type="button"
                 role="tab"
               >
-              AWS Certification
+                AWS Certification
               </button>
             </li>
             <li class="nav-item" role="presentation">
@@ -236,7 +214,7 @@
                 type="button"
                 role="tab"
               >
-              Drawing
+                Drawing
               </button>
             </li>
           </ul>
@@ -244,11 +222,9 @@
       </section>
       <!-- Box contains courses -->
       <section style="width: 70vw">
-        <div class="courses-container" style="margin-right: 0px">
-          <article class="webpage">
-            <h3 style="font-size: x-large; font-weight: 600; padding: 0.5rem 0">
-              Expand your career opportunities with Python
-            </h3>
+        <div class="courses-container">
+          <article class="webpage python-article">
+            <h3>Expand your career opportunities with Python</h3>
             <p style="max-width: 74%">
               Take one of Udemy’s range of Python courses and learn how to code
               using this incredibly useful language. Its simple syntax and
@@ -259,30 +235,26 @@
             </p>
           </article>
           <div
-            class="webpage"
-            style="
-              margin: 6px 0 30px 0;
-              padding: 0;
-              display: flex;
-              align-items: center;
-            "
+            class="webpage "
+            style="margin: 6px 0 30px 0; padding: 0; display: flex"
           >
-            <a href="" class="login"
+            <a href="" class="white-button"
               ><h3
-                style="padding: 0 0.75rem; font-size: medium; font-weight: bold"
+                class="explore-button"
               >
                 Explore Python
               </h3></a
             >
           </div>
-          <div class="courses-pictures" style="width: 100%">
+          <div class="courses-pictures">
             <!-- retrived from json file -->
           </div>
         </div>
       </section>
     </main>
-    <footer style="padding: 0 1rem">
-      <figure class="web-logo" style="margin: 0; padding: 0.8rem">
+    <footer>
+      <div class="web-logo">
+      <figure>
         <a href="">
           <img
             src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg"
@@ -291,7 +263,7 @@
             height="34"
           />
         </a>
-      </figure>
+      </figure></div>
       <div style="padding-right: 1rem; font-size: small">
         © 2022 Udemy, Mustafa Mahmoud.
       </div>

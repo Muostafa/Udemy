@@ -1,13 +1,29 @@
-// get category (python, excel,...)
+// contains all courses elements
+let courses = [];
+// coursesTitle[i] has the title & category(Python, Excel, ...) of courses[i] (help in search)
+let coursesTitle = [];
+// current selected category (python, excel,...) start with python on page load
 let categorySelected = "python";
+
+
+//event handler for changing category
 let pills = document.getElementById("pills-tab");
 pills.addEventListener("click", () => {
-  let pillsArr = document.querySelectorAll(".nav-link");
-  pillsArr.forEach((element) => {
-    if (element.ariaSelected === "true")
-      categorySelected = element.innerText.toLowerCase();
-  });
+  //reset search text
   searchText.value = "";
+
+  //get all categories then save them to pillsArr
+  let pillsArr = document.querySelectorAll(".nav-link");
+  let elementSelected = "";
+  //loop through all of them and get the selected one
+  pillsArr.forEach((element) => {
+    if (element.ariaSelected === "true") {
+      elementSelected = element;
+      categorySelected = element.innerText.toLowerCase();
+    }
+  });
+
+  //hide courses with the wrong category
   for (let i = 0; i < courses.length; i++) {
     if (coursesTitle[i][1] === categorySelected)
       courses[i].classList.remove("hide");
@@ -15,13 +31,23 @@ pills.addEventListener("click", () => {
       courses[i].classList.add("hide");
     }
   }
+
+  //remove article of python when changing tabs
+  let explorePython = document.querySelector(".python-article");
+  if (categorySelected === "python") explorePython.classList.remove("hide");
+  else explorePython.classList.add("hide");
+
+  // change explore button
+  let exploreButton = document.querySelector(".explore-button");
+  exploreButton.innerText = "Explore " + elementSelected.innerText;
 });
 
-// extract text from search bar
+// get searchText element
 const searchForm = document.querySelector(".form");
 const searchText = searchForm.querySelector("input");
 
 // search functionality
+// extract text from search bar
 searchForm.querySelector(".search-button").addEventListener("click", () => {
   //text that we will search with
   let tempText = searchText.value.toLowerCase();
@@ -54,11 +80,7 @@ fetch("http://localhost:3000/courses")
     console.log(err);
   });
 
-// courses picture div
-
-let courses = [];
-// coursesTitle[i] has the title & category(Python, Excel, ...) of courses[i] (help in search)
-let coursesTitle = [];
+//courses picture div
 //coursesPics is the div in html that we will add all courses to it
 const coursesPics = document.querySelector(".courses-pictures");
 
@@ -94,17 +116,13 @@ function renderCourses(course) {
   rating.innerHTML =
     '<h3 class="rating-number">' +
     course.rating +
-    '</h3><img style="align-self: center; padding: 0 4px"src="/images/stars.png"alt="course reviews"height="12px"width="64px"/><h3 class="reviews-number">(' +
+    '</h3><img class="stars" src="/images/stars.png"alt="course reviews"height="12px"width="64px"/><h3 class="reviews-number">(' +
     course.people +
     ")</h3>";
   courseElement.appendChild(rating);
 
   //add price
   let price = document.createElement("h3");
-  price.style.fontSize = "15px";
-  price.style.fontWeight = "bolder";
-  price.style.margin = "3px 0";
-  price.style.padding = "0";
   price.textContent = "E£" + course.price;
   courseElement.appendChild(price);
 
