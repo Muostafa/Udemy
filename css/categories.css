@@ -7,32 +7,56 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  padding: 0;
+  padding: 0 10px;
   margin: 10px 0;
   align-self: center;
 }
 .category-card :hover{
     cursor: pointer;
   }
-.category-card > img {
+  .img-wrapper{
+    margin:0;
+    padding: 0;
+    overflow: hidden;
+  }
+.category-card img {
   height: auto;
   background: #fff;
   display: block;
   object-fit: contain;
-  width: auto;
-  padding: 1rem;
+  width: 100%;
 }
-.category-card > img:hover {
-  transform: scale(105%);
+.category-card img:hover {
+  transform: scale(110%);
+  transition: transform .5s ease;
 }
 .top-categories > h3 {
   font-size: x-large;
   font-weight: 700;
-  padding-left: 1rem;
-  transform: translate(0, 1rem);
+  padding: 0 0 1rem 1rem;
 }
 .top-categories h4 {
   font-size: large;
   font-weight: 700;
   padding: 1rem 0 0 1.2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .top-categories h4 {
+    font-size: large;
+    font-weight: 700;
+    text-align: center;
+  }
+  .top-categories > h3 {
+    text-align: center;
+  }
+  .category-card img {
+    margin: auto;
+    width: auto;
+  }
+}
+@media only screen and (max-width: 310px) {
+  .category-card img {
+    width: 100%;
+  }
 }

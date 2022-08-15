@@ -205,6 +205,18 @@
       "bestseller": true
     },
     {
+      "id": 17,
+      "link": "",
+      "title": "Financial Budgeting and Forecasting In Excel Complete Course",
+      "author": "Todd McLeod",
+      "image": "https://img-b.udemycdn.com/course/240x135/130298_9a8e_10.jpg",
+      "price": "269.99",
+      "rating": 4.3,
+      "people": "3,534",
+      "category": "excel",
+      "bestseller": false
+    },
+    {
       "id": 18,
       "link": "https://www.udemy.com/course/automate/",
       "title": "The Complete JavaScript Course 2022: From Zero to Expert!",
