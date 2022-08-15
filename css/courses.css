@@ -39,11 +39,11 @@
 }
 .course-content {
   box-sizing: border-box;
-  margin: 10px 5px;
-  padding: 0;
+  margin: auto;
   flex: 0 0 15%;
   flex-direction: column;
-  display: inline-block;
+  display: flex;
+  align-items: flex-start;
   position: relative;
   width: 240px;
   height: 265px;
@@ -78,6 +78,9 @@
 }
 .courses-container > article > h3{
   font-size: x-large; font-weight: 600; padding: 0.5rem 0
+}
+.courses-container > article{
+  text-align: start;
 }
 .explore-button {
   padding: 0 0.75rem; font-size: medium; font-weight: bold
@@ -153,6 +156,15 @@
     -webkit-box-sizing: border-box;
     transform: translate(17px, 0);
     margin: auto;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .course-content {
+    flex: 0 0 30%;
+    max-width: 240px;
+  }
+  .courses-container {
+    min-width: 132%;
   }
 }
 @media only screen and (max-width: 850px) {

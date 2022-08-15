@@ -4,17 +4,21 @@ let courses = [];
 let coursesTitle = [];
 // current selected category (python, excel,...) start with python on page load
 let categorySelected = "python";
+//courses that should appear on window (change on changing categories and search)
+let coursesFiltered = [];
 
-
-//event handler for changing category
 let pills = document.getElementById("pills-tab");
+//event handler for changing category
 pills.addEventListener("click", () => {
+  //remove old filters
+  coursesFiltered = [];
   //reset search text
   searchText.value = "";
 
-  //get all categories then save them to pillsArr
+  //get all categories (Python, Excel, ...) buttons then save them to pillsArr
   let pillsArr = document.querySelectorAll(".nav-link");
   let elementSelected = "";
+
   //loop through all of them and get the selected one
   pillsArr.forEach((element) => {
     if (element.ariaSelected === "true") {
@@ -22,14 +26,10 @@ pills.addEventListener("click", () => {
       categorySelected = element.innerText.toLowerCase();
     }
   });
-
-  //hide courses with the wrong category
+  //filter courses with the correct category
   for (let i = 0; i < courses.length; i++) {
     if (coursesTitle[i][1] === categorySelected)
-      courses[i].classList.remove("hide");
-    else {
-      courses[i].classList.add("hide");
-    }
+      coursesFiltered.push(courses[i]);
   }
 
   //remove article of python when changing tabs
@@ -40,6 +40,8 @@ pills.addEventListener("click", () => {
   // change explore button
   let exploreButton = document.querySelector(".explore-button");
   exploreButton.innerText = "Explore " + elementSelected.innerText;
+
+  resetSlider(coursesFiltered);
 });
 
 // get searchText element
@@ -49,19 +51,20 @@ const searchText = searchForm.querySelector("input");
 // search functionality
 // extract text from search bar
 searchForm.querySelector(".search-button").addEventListener("click", () => {
+  //remove old filters
+  coursesFiltered = [];
   //text that we will search with
   let tempText = searchText.value.toLowerCase();
-  //loop through all titles and add .hide css class to hide unwanted courses
+  //loop through all titles and filter them
+  //note: We can loop through the filter courses with the current category and remove unwanted ones for better efficiency
   for (let i = 0; i < courses.length; i++) {
     if (
       coursesTitle[i][0].includes(tempText) &&
       coursesTitle[i][1] === categorySelected
     )
-      courses[i].classList.remove("hide");
-    else {
-      courses[i].classList.add("hide");
-    }
+      coursesFiltered.push(courses[i]);
   }
+  resetSlider(coursesFiltered);
 });
 
 //fetch courses json file
@@ -76,6 +79,9 @@ fetch("http://localhost:3000/courses")
       renderCourses(course);
     });
   })
+  .then(() => {
+    resetSlider(coursesFiltered);
+  })
   .catch((err) => {
     console.log(err);
   });
@@ -88,7 +94,6 @@ const coursesPics = document.querySelector(".courses-pictures");
 function renderCourses(course) {
   let courseElement = document.createElement("div");
   courseElement.classList.add("course-content");
-  if (course.category !== "python") courseElement.classList.add("hide");
 
   //add img
   let img = document.createElement("img");
@@ -133,7 +138,9 @@ function renderCourses(course) {
     courseElement.appendChild(bestseller);
   }
 
-  coursesPics.appendChild(courseElement);
+  //start with python on page load
+  if (course.category === "python") coursesFiltered.push(courseElement);
+
   courses.push(courseElement);
   coursesTitle.push([
     course.title.toLowerCase(),

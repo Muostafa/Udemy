@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/billboard.css" />
     <link rel="stylesheet" href="/css/courses.css" />
+    <link rel="stylesheet" href="/css/categories.css" />
   </head>
   <body>
     <nav>
@@ -235,35 +236,151 @@
             </p>
           </article>
           <div
-            class="webpage "
+            class="webpage"
             style="margin: 6px 0 30px 0; padding: 0; display: flex"
           >
             <a href="" class="white-button"
-              ><h3
-                class="explore-button"
-              >
-                Explore Python
-              </h3></a
+              ><h3 class="explore-button">Explore Python</h3></a
             >
+          </div>
+          <div class="container my-3">
+            <div
+              id="recipeCarousel"
+              class="carousel slide row mx-auto my-auto justify-content-center"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner" role="listbox"></div>
+              <a
+                class="carousel-control-prev bg-transparent w-aut"
+                href="#recipeCarousel"
+                role="button"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+              </a>
+              <a
+                class="carousel-control-next bg-transparent w-aut"
+                href="#recipeCarousel"
+                role="button"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+              </a>
+            </div>
           </div>
           <div class="courses-pictures">
             <!-- retrived from json file -->
           </div>
         </div>
       </section>
+      <!-- Top Categories Pictures  -->
+      <section class="top-categories">
+        <h3>Top categories</h3>
+        <div class="container-fluid my-5">
+          <div class="row">
+            <div
+              class="category-card col-lg-3 col-md-4 col-sm-12 d-flex justify-content-center"
+            >
+              <img
+                alt=""
+                width="300"
+                height="300"
+                src="https://s.udemycdn.com/home/top-categories/lohp-category-design-v2.jpg"
+              />
+            </div>
+            <div
+              class="category-card col-lg-3 col-md-4 col-sm-12 d-flex justify-content-center"
+            >
+              <img
+                alt=""
+                width="300"
+                height="300"
+                src="https://s.udemycdn.com/home/top-categories/lohp-category-development-v2.jpg"
+              />
+            </div>
+            <div
+              class="category-card col-lg-3 col-md-4 col-sm-12 d-flex justify-content-center"
+            >
+              <img
+                alt=""
+                width="300"
+                height="300"
+                src="https://s.udemycdn.com/home/top-categories/lohp-category-marketing-v2.jpg"
+              />
+            </div>
+            <div
+              class="category-card col-lg-3 col-md-4 col-sm-12 d-flex justify-content-center"
+            >
+              <img
+                alt=""
+                width="300"
+                height="300"
+                src="https://s.udemycdn.com/home/top-categories/lohp-category-marketing-v2.jpg"
+              />
+            </div>
+            <div
+              class="category-card col-lg-3 col-md-4 col-sm-12 d-flex justify-content-center"
+            >
+              <img
+                alt=""
+                width="300"
+                height="300"
+                src="https://s.udemycdn.com/home/top-categories/lohp-category-marketing-v2.jpg"
+              />
+            </div>
+            <div
+              class="category-card col-lg-3 col-md-4 col-sm-12 d-flex justify-content-center"
+            >
+              <img
+                alt=""
+                width="300"
+                height="300"
+                src="https://s.udemycdn.com/home/top-categories/lohp-category-marketing-v2.jpg"
+              />
+            </div>
+            <div
+              class="category-card col-lg-3 col-md-4 col-sm-12 d-flex justify-content-center"
+            >
+              <img
+                alt=""
+                width="300"
+                height="300"
+                src="https://s.udemycdn.com/home/top-categories/lohp-category-marketing-v2.jpg"
+              />
+            </div>
+            <div
+              class="category-card col-lg-3 col-md-4 col-sm-12 d-flex justify-content-center"
+            >
+              <img
+                alt=""
+                width="300"
+                height="300"
+                src="https://s.udemycdn.com/home/top-categories/lohp-category-marketing-v2.jpg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="web-logo">
-      <figure>
-        <a href="">
-          <img
-            src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg"
-            alt="Udemy logo"
-            width="91"
-            height="34"
-          />
-        </a>
-      </figure></div>
+        <figure>
+          <a href="">
+            <img
+              src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg"
+              alt="Udemy logo"
+              width="91"
+              height="34"
+            />
+          </a>
+        </figure>
+      </div>
       <div style="padding-right: 1rem; font-size: small">
         © 2022 Udemy, Mustafa Mahmoud.
       </div>
@@ -274,6 +391,8 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
+    <script src="/javascript/script.js"></script>
+    <!-- Use scriptwithnoslider.js instead if you want to see flexbox responsive design -->
+    <script src="/javascript/carouselfunction.js"></script>
   </body>
 </html>
