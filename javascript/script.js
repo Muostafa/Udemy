@@ -41,14 +41,15 @@ pills.addEventListener("click", () => {
   let exploreButton = document.querySelector(".explore-button");
   exploreButton.innerText = "Explore " + elementSelected.innerText;
 
+  //resetSlider(x) is defined in carouselfunction.js
   resetSlider(coursesFiltered);
 });
 
+// search functionality
 // get searchText element
 const searchForm = document.querySelector(".form");
 const searchText = searchForm.querySelector("input");
 
-// search functionality
 // extract text from search bar
 searchForm.querySelector(".search-button").addEventListener("click", () => {
   //remove old filters
@@ -56,7 +57,6 @@ searchForm.querySelector(".search-button").addEventListener("click", () => {
   //text that we will search with
   let tempText = searchText.value.toLowerCase();
   //loop through all titles and filter them
-  //note: We can loop through the filter courses with the current category and remove unwanted ones for better efficiency
   for (let i = 0; i < courses.length; i++) {
     if (
       coursesTitle[i][0].includes(tempText) &&
@@ -80,17 +80,14 @@ fetch("http://localhost:3000/courses")
     });
   })
   .then(() => {
+    //on page load show all python courses
     resetSlider(coursesFiltered);
   })
   .catch((err) => {
     console.log(err);
   });
 
-//courses picture div
-//coursesPics is the div in html that we will add all courses to it
-const coursesPics = document.querySelector(".courses-pictures");
-
-//create course from json object and add it to the html
+//create course html element from json object and add it to the courses array
 function renderCourses(course) {
   let courseElement = document.createElement("div");
   courseElement.classList.add("course-content");

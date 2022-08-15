@@ -240,8 +240,8 @@ main {
 }
 
 footer {
-  color: #fff;
   display: flex;
+  color: #fff;
   justify-content: space-between;
   background-color: #1c1d1f;
   align-items: center;
@@ -297,7 +297,7 @@ footer {
   border-radius: 100%;
   height: 50px;
   width: 50px;
-  align-self: center;
+  transform: translate(0,50px);
 }
 @media (max-width: 767px) {
   .carousel-inner .carousel-item > div {

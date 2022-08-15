@@ -5,7 +5,8 @@
 }
 .category-card {
   overflow: hidden;
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 0;
   margin: 10px 0;
   align-self: center;
@@ -15,17 +16,23 @@
   }
 .category-card > img {
   height: auto;
-  background: #f7f9fa;
+  background: #fff;
   display: block;
   object-fit: contain;
-  width: 300px;
+  width: auto;
+  padding: 1rem;
 }
 .category-card > img:hover {
-  transform: scale(110%);
+  transform: scale(105%);
 }
 .top-categories > h3 {
   font-size: x-large;
   font-weight: 700;
-  padding-left: 6rem;
+  padding-left: 1rem;
   transform: translate(0, 1rem);
+}
+.top-categories h4 {
+  font-size: large;
+  font-weight: 700;
+  padding: 1rem 0 0 1.2rem;
 }

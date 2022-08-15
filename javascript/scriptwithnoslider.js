@@ -62,6 +62,12 @@ searchForm.querySelector(".search-button").addEventListener("click", () => {
     }
   }
 });
+//hide the next and prev buttons
+const nextButton = document.querySelector(".carousel-control-next");
+nextButton.classList.add("hide");
+
+const prevButton = document.querySelector(".carousel-control-prev");
+prevButton.classList.add("hide");
 
 //fetch courses json file
 //type "npm install -g json-server" then "json-server --watch courses.json" in terminal to start server
@@ -76,7 +82,7 @@ fetch("http://localhost:3000/courses")
     });
   })
   .then(() => {
-    console.log(courses)
+    console.log(courses);
   })
   .catch((err) => {
     console.log(err);
