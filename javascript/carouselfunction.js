@@ -1,18 +1,34 @@
-function resetSlider(filteredCourses) {
-  //remove old courses from window
-  let slider = document.querySelector(".carousel-inner");
-  slider.innerHTML = "";
+function resetCarousel(filteredCourses) {
+
+  removeOldCoursesFromWindow();
+
+  //with 3 or less courses we don't need the carousel
+  if (filteredCourses.length <= 3) {
+    resetCarouselWithLowCards(filteredCourses);
+    return;
+  }
+
+  createCoursesCarouselItems(filteredCourses);
+
+  showCarouselNextPrevButtons();
+
+  //note: each carousel-item have only 1 course
+  //if there is more than 3 courses clone courses so they are found in multiple carousel items
+  multipleCoursesPerSlide();
+}
+
+function removeOldCoursesFromWindow() {
+  let carousel = document.querySelector(".carousel-inner");
+  carousel.innerHTML = "";
 
   const coursesPics = document.querySelector(".courses-pictures");
   coursesPics.innerHTML = "";
+}
 
-  //with 3 or less filters we don't need the slider
-  if (coursesFiltered.length <= 3) {
-    resetSliderWithLowCards(filteredCourses);
-    return;
-  }
+function createCoursesCarouselItems(filteredCourses) {
   //iterate through all filtered courses and make them carousel items
   //make the first item active where it will be the first slide to appear on window load
+  let carousel = document.querySelector(".carousel-inner");
   let i = 0;
   filteredCourses.forEach((x) => {
     const courseCarouselItem = document.createElement("div");
@@ -21,20 +37,9 @@ function resetSlider(filteredCourses) {
       courseCarouselItem.classList.add("active");
     x.classList.remove("hide");
     courseCarouselItem.appendChild(x);
-    slider.appendChild(courseCarouselItem);
+    carousel.appendChild(courseCarouselItem);
     i++;
   });
-
-  //show the next and prev buttons
-  const nextButton = document.querySelector(".carousel-control-next");
-  nextButton.classList.remove("hide");
-
-  const prevButton = document.querySelector(".carousel-control-prev");
-  prevButton.classList.remove("hide");
-
-  //note: each carousel-item have only 1 course
-  //if there is more than 3 courses clone courses so they are found in multiple carousel items
-  multipleCoursesPerSlide();
 }
 
 function multipleCoursesPerSlide() {
@@ -56,18 +61,31 @@ function multipleCoursesPerSlide() {
   });
 }
 
-function resetSliderWithLowCards(filteredCourses) {
+function resetCarouselWithLowCards(filteredCourses) {
+  //using design from phase 2
   const coursesPics = document.querySelector(".courses-pictures");
   //iterate through all filtered courses and add them to the only 1 carousel-item
   filteredCourses.forEach((x) => {
     x.classList.add("course-content");
     coursesPics.appendChild(x);
   });
+  hideCarouselNextPrevButtons();
+}
 
+function hideCarouselNextPrevButtons() {
   //hide the next and prev buttons
   const nextButton = document.querySelector(".carousel-control-next");
   nextButton.classList.add("hide");
 
   const prevButton = document.querySelector(".carousel-control-prev");
   prevButton.classList.add("hide");
+}
+
+function showCarouselNextPrevButtons() {
+  //show the next and prev buttons
+  const nextButton = document.querySelector(".carousel-control-next");
+  nextButton.classList.remove("hide");
+
+  const prevButton = document.querySelector(".carousel-control-prev");
+  prevButton.classList.remove("hide");
 }
