@@ -1,6 +1,14 @@
 // contains all courses elements
 let allCoursesElements = [];
+// coursesTitleAndCategory[i] has the title & category of allCoursesElements[i]
 let coursesTitleAndCategory = [];
+function getTitle(courseIndex){
+  return coursesTitleAndCategory[courseIndex][0];
+}
+
+function getCategory(courseIndex){
+  return coursesTitleAndCategory[courseIndex][1];
+}
 
 // current selected category (python, excel,...) start with python on page load
 let currentCategorySelected = "python";
@@ -173,12 +181,4 @@ function createBestSellerElement() {
   let bestseller = document.createElement("aside");
   bestseller.innerHTML = '<aside class="bestseller">Bestseller</aside>';
   return bestseller;
-}
-
-function getTitle(courseIndex){
-  return coursesTitleAndCategory[courseIndex][0];
-}
-
-function getCategory(courseIndex){
-  return coursesTitleAndCategory[courseIndex][1];
 }

@@ -14,7 +14,7 @@ function resetCarousel(filteredCourses) {
 
   //note: each carousel-item have only 1 course
   //if there is more than 3 courses clone courses so they are found in multiple carousel items
-  multipleCoursesPerSlide();
+  multipleCoursesPerCarouselItem();
 }
 
 function removeOldCoursesFromWindow() {
@@ -42,7 +42,7 @@ function createCoursesCarouselItems(filteredCourses) {
   });
 }
 
-function multipleCoursesPerSlide() {
+function multipleCoursesPerCarouselItem() {
   let items = document.querySelectorAll(".carousel .carousel-item");
   //for each course we want to clone the next 4 courses next to it in the same slide
   //note : the difference between 1 carousel item and its neighbor is only 1 card
