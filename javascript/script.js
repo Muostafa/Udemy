@@ -166,7 +166,7 @@ function createRatingElement(courseData) {
   rating.innerHTML =
     '<h3 class="rating-number">' +
     courseData.rating +
-    '</h3><img class="stars" src="/images/stars.png"alt="course reviews"height="12px"width="64px"/><h3 class="reviews-number">(' +
+    '</h3><img class="stars" src="images/stars.png"alt="course reviews"height="12px"width="64px"/><h3 class="reviews-number">(' +
     courseData.people +
     ")</h3>";
   return rating;
