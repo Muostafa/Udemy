@@ -17,7 +17,8 @@ let coursesFiltered = [];
 
 //fetch courses json file
 //type "npm install -g json-server" then "json-server --watch courses.json" in terminal to start server
-fetch("http://localhost:3000/courses")
+//use "http://localhost:3000/courses" to test local server
+fetch("https://api.npoint.io/5534f7c0bfb81f0dca56")
   .then((response) => {
     return response.json();
   })
