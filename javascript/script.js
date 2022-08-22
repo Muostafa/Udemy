@@ -2,11 +2,11 @@
 let allCoursesElements = [];
 // coursesTitleAndCategory[i] has the title & category of allCoursesElements[i]
 let coursesTitleAndCategory = [];
-function getTitle(courseIndex){
+function getTitle(courseIndex) {
   return coursesTitleAndCategory[courseIndex][0];
 }
 
-function getCategory(courseIndex){
+function getCategory(courseIndex) {
   return coursesTitleAndCategory[courseIndex][1];
 }
 
@@ -30,7 +30,7 @@ fetch("https://api.npoint.io/5534f7c0bfb81f0dca56")
   })
   .then(() => {
     //on page load show all python courses
-      //resetSlider(x) is defined in carouselfunction.js
+    //resetSlider(x) is defined in carouselfunction.js
     resetCarousel(coursesFiltered);
   })
   .catch((err) => {
