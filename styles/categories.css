@@ -25,10 +25,10 @@
   display: block;
   object-fit: contain;
   width: 100%;
+  transition: all .5s ease;
 }
 .category-card img:hover {
   transform: scale(110%);
-  transition: transform .5s ease;
 }
 .top-categories > h3 {
   font-size: x-large;
